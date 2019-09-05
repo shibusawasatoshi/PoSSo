@@ -12,8 +12,9 @@ function nannkaugoku(){
     
     if(idou===true){
       console.log("なんで表示されないんだよクソが");
-      const uurl=`posso3.html`;
-      window.open(uurl,"_blank");
+      location.href='./posso3.html'
+      /*const posso=window.open('./posso3.html');  //window.openだと動かない
+      posso.focus();*/
     }
   }
 }
