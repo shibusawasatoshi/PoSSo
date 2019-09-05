@@ -1,0 +1,56 @@
+body{
+    text-align: center;
+    background-color: white;
+    font-family: 'ヒラギノ角ゴシック';
+  }
+  
+  .header {
+    height:50px;
+    widows: 100%;
+    background: black;
+} 
+  .subBig{
+    color: yellow;
+    font-size: 1.2em;
+  }
+  /* 発電機 */
+  .subSmall{
+    color: white;
+    font-size: 1.2em;
+  }
+  /* の使い方・付属品 */
+  .btn1 {
+    display: inline-block;
+   padding: 0.3em 1em;
+   text-decoration: none;
+   color: #0071b8;
+   border: solid 2px #0071b8;
+   border-radius: 3px;
+   transition: .4s;
+   font-family: 'ヒラギノ角ゴシック'
+   }
+
+  .btn1:hover {
+   background: #0071b8;
+     color: white;
+    }
+    /* 発電機の仕様書へ */
+  .btn2 {
+        display: inline-block;
+       padding: 0.3em 1em;
+       text-decoration: none;
+       color: #0071b8;
+       border: solid 2px #0071b8;
+       border-radius: 3px;
+       transition: .4s;
+       font-family: 'ヒラギノ角ゴシック'
+       }
+
+           .btn2{
+       background: #0071b8;
+         color: white;
+        }
+         /* 位置情報検索ページへ */
+        div{
+          text-align: center;
+        }
