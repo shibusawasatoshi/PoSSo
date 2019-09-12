@@ -64,7 +64,7 @@ function readstart() {
 
      var mymap = L.map('mapid').setView([lat , lng], 15);
      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 20
+        maxZoom: 18
     })
     .addTo(mymap);           
     var marker = L.marker([lat , lng])
