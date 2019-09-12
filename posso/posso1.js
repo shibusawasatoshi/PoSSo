@@ -22,7 +22,7 @@ function keiro(position){
      
   const clat=position.coords.latitude;
   const clng=position.coords.longitude;
-  window.open(`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`);
+  location.href=`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`;
 }}}}}
 
 function keiroero(){
