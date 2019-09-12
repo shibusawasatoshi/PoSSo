@@ -1,86 +1,75 @@
 .header {
-    height:50px;
-    widows: 100%;
-    background: black;
+  height:50px;
+  widows: 100%;
+  background: black;
 } 
 
 .mainBig{
-  color: yellow;
-  font-size: 1.2em;
+color: yellow;
+font-size: 1.2em;
 }
 /* 発電機 */
 .subBig{
-    color: white;
-    font-size: 1.2em;
-  }
- /* の設置場所を確認できます */
- .subSmall{
-    color: rgb(79, 65, 47);
-    font-size: 1.5em;
-  }
-  /* 災害発生時に利用可能な発電機の設置場所を確認できます。停電発生時等にご活用ください。 */
+  color: white;
+  font-size: 1.2em;
+}
+/* の設置場所を確認できます */
+.subSmall{
+  color: rgb(79, 65, 47);
+  font-size: 1.5em;
+}
+/* 災害発生時に利用可能な発電機の設置場所を確認できます。停電発生時等にご活用ください。 */
 
 
-  .mainSmall{
-    color: red;
-    font-size: 1.5em;
-  }
+.mainSmall{
+  color: red;
+  font-size: 1.5em;
+}
 
-  /* ※災害発生時には発電機までの経路が危険な状態であることが考えられます。ご自身の判断のもと安全に十分気をつけてご利用ください。 */
-  body{
-    text-align: center;
-    background-color:white;
-    font-family: 'ヒラギノ角ゴシック';
-  }
-  .startBtn {
-    display: inline-block;
-    padding: 0.35em 0.7em;
-    text-decoration: none;
-    background: #fffbf4;
-    border-left: solid 12px  rgb(57, 57, 238);
-    color:  rgb(57, 57, 238);
-    font-weight: bold;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-    font-size: 2.5em
-  }
-  .startBtn:active {
-    box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
-    transform: translateY(2px);
-  }
-  /* 発電機の位置情報を読み込むボタン */
-  .btn {
-    display: inline-block;
-    padding: 0.3em 1em;
-    text-decoration: none;
-    color: #0071b8;
-    border: solid 2px #0071b8;
-    border-radius: 3px;
-    transition: .4s;
-    font-family: 'ヒラギノ角ゴシック'
-  }
-  .btn:hover {
-    background: #0071b8;
-    color: white;
-  }
-   /* 発電機の使い方と付属品説明ページへ飛ぶボタン */
-  div{
-    text-align: center;
-  }
-  #msgarea{
-    color: #fffbf4; 
-    width:604px;
-    height: 40px;
-    font-size: 20pt;
-    background: #0071b8;
-    text-align: center;
-  
-  }
-  
+/* ※災害発生時には発電機までの経路が危険な状態であることが考えられます。ご自身の判断のもと安全に十分気をつけてご利用ください。 */
+body{
+  text-align: center;
+  background-color:white;
+  font-family: 'ヒラギノ角ゴシック';
+}
+
+/* 発電機の位置情報を読み込むボタン */
+.btn,#keiro{
+  display: inline-block;
+  font-size: 10pt;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  background-color: #fffbf4;
+  color: #0071b8;
+  border: solid 2px #0071b8;
+  border-radius: 3px;
+  transition: .4s;
+  font-family: 'ヒラギノ角ゴシック'
+}
+
+.btn:hover,#keiro:hover {
+  background: #0071b8;
+  color: white;
+}
+ /* 発電機の使い方と付属品説明ページへ飛ぶボタン */
+div{
+  text-align: center;
+}
+#msgarea{
+  color: #fffbf4; 
+  width:604px;
+  height: 40px;
+  font-size: 20pt;
+  background: #0071b8;
+  text-align: center;
+
+}
+
 #mapid{
-  width: 600px; 
-  height: 400px; 
-  text-align: center; 
-  border: solid black; 
+width: 600px; 
+height: 400px; 
+text-align: center; 
+border: solid black; 
 }
 /* 地図を表示する枠 */
 

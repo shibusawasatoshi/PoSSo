@@ -1,24 +1,36 @@
 const url = "wss://api.sakura.io/ws/v1/62ec74c0-c25d-4085-9836-d49fe7a5432c";
-/*
-nannkaugoku();
 
-function nannkaugoku(){
 
-  let tukatteru=navigator.userAgent;
-  if(tukatteru.indexOf("iPhone")>0 || tukatteru.indexOf("iPad")>0 || tukatteru.indexOf("Android")>0 || tukatteru.indexOf("iPod")>0){
-    const idou =confirm("スマホ版のサイトに移動しますか？");
-    
-    if(idou===true){
-      console.log("なんで表示されないんだよクソが");
-      const uurl=`https://www.google.com/`;
-      window.open(uurl,"_blank");
-    }
-  }
+document.querySelector("#keiro").addEventListener("click",kuso());
+
+function kuso(){
+  console.log("動け！！");
+navigator.geolocation.getCurrentPosition(keiro, keiroero)}
+
+function keiro(position){
+  var client = new WebSocket(url);
+  client.onmessage = function(e) {    
+    var data = JSON.parse(e.data);
+    if (data.type == 'channels') {
+
+      var datalist = data.payload.channels;
+      
+      for (var i = 0; i < datalist.length; i++) {
+        if ((datalist[i].channel == 0)||(datalist[i].channel == 1)) {
+          var lat = datalist[0].value;
+          var lng = datalist[1].value;
+     
+  const clat=position.coords.latitude;
+  const clng=position.coords.longitude;
+  window.open(`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`);
+}}}}}
+
+function keiroero(){
+  alert("位置情報が取得できませんでした");
 }
-*/
+
 
 readstart();
-document.querySelector(".startBtn").addEventListener("click",readstart());
 
 window.onload=readstart();
 
@@ -64,7 +76,7 @@ function readstart() {
 
      var mymap = L.map('mapid').setView([lat , lng], 15);
      L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 20
+        maxZoom: 18
     })
     .addTo(mymap);           
     var marker = L.marker([lat , lng])

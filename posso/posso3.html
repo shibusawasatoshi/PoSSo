@@ -1,47 +1,46 @@
 
 
-
 <html lang="ja"><head>
-    <meta charset="UTF-8">
-        <title>PortableGeneratorSearchingSystemOnDisaster</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css">
-        <link rel="stylesheet" href="./posso3.css">
-        <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>  
-    </head>
+  <meta charset="UTF-8">
+      <title>PortableGeneratorSearchingSystemOnDisaster</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css">
+      <link rel="stylesheet" href="./posso3.css">
+      <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>  
+  </head>
 <body>
-  <center>
-    
-  <div class="header">
-    <h1><span class="mainBig">発電機</span><span class="subBig">の設置場所を確認できます</span></h1>
-    <p></p>
-    <style>
-
-    </style>
-
-  </div>
-    <div><p class="subSmall">　災害発生時に利用可能な発電機の設置場所を確認できます。<br>停電発生時等にご活用ください。</p></div>
-    <div><p class="mainSmall">※災害発生時には発電機までの経路が危険な状態であることが考えられます。<br>
-    ご自身の判断のもと安全に十分気をつけてご利用ください。</p></div>
-
-  <div id="msgarea">接続していません</div><br>
-
-  <div id="mapid" ></div><br>
-  <!--マップが表示されるための空白-->
+<center>
   
+<div class="header">
+  <h1><span class="mainBig">発電機</span><span class="subBig">の設置場所を確認できます</span></h1>
+  <p></p>
+  <style>
+
+  </style>
+
+</div>
+  <div><p class="subSmall">　災害発生時に利用可能な発電機の設置場所を確認できます。<br>停電発生時等にご活用ください。</p></div>
+  <div><p class="mainSmall">※災害発生時には発電機までの経路が危険な状態であることが考えられます。<br>
+  ご自身の判断のもと安全に十分気をつけてご利用ください。</p></div>
+
+<div id="msgarea">接続していません</div><br>
+
+<div id="mapid" ></div><br>
+<!--マップが表示されるための空白-->
 
 
-   <div><input class="startBtn" type="button" value="位置データを更新する"></div>
-   <!--発電機の位置情報を読み込むボタン-->
 
 
-  <br>
-  <div><a href="posso2.html" class="btn">発電機の使い方へ</a></div>
+
+<br>
+<div>
+<button id="keiro" >経路を表示する</button>  
+  <a href="posso2.html" class="btn">発電機の使い方へ</a></div>
 　<!--発電機の使い方と付属品説明ページへ飛ぶボタン-->
 
-   <script type="text/javascript" src="posso1.js"></script>
-  <!--位置情報を受け取るプログラム-->
-  </center>
+ <script type="text/javascript" src="posso1.js"></script>
+<!--位置情報を受け取るプログラム-->
+</center>
 </body>
