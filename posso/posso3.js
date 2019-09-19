@@ -20,11 +20,12 @@ function nannkaugoku(){
   }
 }
 
-
+let kusoFlag = false;
 document.querySelector("#keiro").addEventListener("click",kuso());
 
 function kuso(){
   console.log("動け！！");
+  let kusoFlag = true;
 navigator.geolocation.getCurrentPosition(keiro, keiroero)}
 
 function keiro(position){
@@ -42,7 +43,11 @@ function keiro(position){
      
   const clat=position.coords.latitude;
   const clng=position.coords.longitude;
-  window.open(`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`);
+  if (kusoFlag === true) {
+    console.log(kusoFlag);
+  let kusoFlag = false;
+  location.href=`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`;
+}
 }}}}}
 
 function keiroero(){

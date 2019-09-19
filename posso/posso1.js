@@ -2,13 +2,16 @@ const url = "wss://api.sakura.io/ws/v1/62ec74c0-c25d-4085-9836-d49fe7a5432c";
 let kusoFlag = false;
 if(navigator.geolocation){
   console.log("ok");
+  console.log(navigator.geolocation);
 }else{
   console.log("not ok");
 }
+
+
 document.querySelector("#keiro").addEventListener('click', ()=>{
   console.log("動け！！");
   let kusoFlag = true;
-navigator.geolocation.getCurrentPosition(keiro(), keiroero())
+  navigator.geolocation.getCurrentPosition(keiro(), keiroero());
 });
 /*
 function kuso(){
@@ -17,6 +20,12 @@ function kuso(){
 navigator.geolocation.getCurrentPosition(keiro, keiroero)}*/
 
 function keiro(coords){
+
+  if (kusoFlag === true) {
+    console.log(kusoFlag);
+  let kusoFlag = false;
+  location.href=`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`;
+}
 
   let client = new WebSocket(url);
   client.onmessage = function(e) {    
@@ -32,11 +41,7 @@ function keiro(coords){
 
   const clat=coords.latitude;
   const clng=coords.longitude;
-  if (kusoFlag === true) {
-    console.log(kusoFlag);
-  let kusoFlag = false;
-  location.href=`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`;
-}
+
 }}}}}
 
 function keiroero(){
