@@ -1,13 +1,18 @@
 const url = "wss://api.sakura.io/ws/v1/62ec74c0-c25d-4085-9836-d49fe7a5432c";
+let kusoFlag = false;
 
-
-document.querySelector("#keiro").addEventListener("click",kuso());
-
+document.querySelector("#keiro").addEventListener('click', ()=>{
+  console.log("動け！！");
+  let kusoFlag = true;
+navigator.geolocation.getCurrentPosition(keiro(), keiroero())
+});
+/*
 function kuso(){
   console.log("動け！！");
-navigator.geolocation.getCurrentPosition(keiro, keiroero)}
+  let kusoFlag = true;
+navigator.geolocation.getCurrentPosition(keiro, keiroero)}*/
 
-function keiro(position){
+function keiro(){
   var client = new WebSocket(url);
   client.onmessage = function(e) {    
     var data = JSON.parse(e.data);
@@ -22,7 +27,11 @@ function keiro(position){
      
   const clat=position.coords.latitude;
   const clng=position.coords.longitude;
+  if (kusoFlag === true) {
+    console.log(kusoFlag);
+  let kusoFlag = false;
   location.href=`https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${clat},${clng}`;
+}
 }}}}}
 
 function keiroero(){
