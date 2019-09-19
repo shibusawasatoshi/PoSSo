@@ -48,7 +48,7 @@ function readstart() {
   
 //接続にエラーが発生した際のイベント
   client.onerror = function() {   
-    alert("error");
+    alert("エラーです");
     output.innerHTML="もう一度お試しください";
   };
 
